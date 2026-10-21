@@ -50,7 +50,7 @@ public class PasswordUtilsTest {
     void testDescribePasswordLengthCountSpecialCharacters()
     {
        //arrange
-        String password = "@@@";
+        String password = "abdc@@@fasf";
         //act
         int actual = PasswordUtils.countSpecialCharacters(password);
         //assert
