@@ -39,7 +39,7 @@ public class PasswordUtilsTest {
     void testDescribePasswordLengthContainsTriple()
     {
        //arrange
-        String password = "aaa";
+        String password = "fasaaaFAS";
         //act
         boolean actual = PasswordUtils.containsTriple(password);
         //assert
@@ -53,6 +53,18 @@ public class PasswordUtilsTest {
         String password = "abdc@@@fasf";
         //act
         int actual = PasswordUtils.countSpecialCharacters(password);
+        //assert
+        assertEquals(3, actual);
+    }
+
+        @Test 
+    void testDescribePasswordLengthHasSufficientSpecialCharacters()
+    {
+       //arrange
+        String password = "abdc@@@fasf";
+        
+        //act
+        int actual = PasswordUtils.hasSufficientSpecialCharacters(password,);
         //assert
         assertEquals(3, actual);
     }
