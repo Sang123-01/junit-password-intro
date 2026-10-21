@@ -45,4 +45,15 @@ public class PasswordUtilsTest {
         //assert
         assertEquals(true, actual);
     }
+
+    @Test 
+    void testDescribePasswordLengthCountSpecialCharacters()
+    {
+       //arrange
+        String password = "@@@";
+        //act
+        int actual = PasswordUtils.countSpecialCharacters(password);
+        //assert
+        assertEquals(3, actual);
+    }
 }
